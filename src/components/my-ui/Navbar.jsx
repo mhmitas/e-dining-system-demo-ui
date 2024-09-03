@@ -9,12 +9,13 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 export default function ResponsiveNavbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     const navItems = [
-        { name: "Home", href: "#" },
+        { name: "Dashboard", href: "/dashboard" },
         { name: "About", href: "#" },
         { name: "Services", href: "#" },
         { name: "Contact", href: "#" },
@@ -25,20 +26,20 @@ export default function ResponsiveNavbar() {
             <div className="my-container mx-auto flex items-center w-full h-full">
                 <div className="flex items-center justify-between h-full w-full">
                     <div className="flex items-center">
-                        <a href="#" className="text-xl font-bold">
-                            Logo
-                        </a>
+                        <Link href="/" className="text-xl font-bold">
+                            E-Dining
+                        </Link>
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                             {navItems.map((item) => (
-                                <a
+                                <Link
                                     key={item.name}
                                     href={item.href}
                                     className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-foreground hover:text-primary"
                                 >
                                     {item.name}
-                                </a>
+                                </Link>
                             ))}
                             <button className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-foreground hover:text-primary">Sign In</button>
                         </div>
@@ -58,12 +59,12 @@ export default function ResponsiveNavbar() {
                             <DropdownMenuContent align="end" className="w-[200px]">
                                 {navItems.map((item) => (
                                     <DropdownMenuItem key={item.name} asChild>
-                                        <a
+                                        <Link
                                             href={item.href}
                                             className="w-full px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground"
                                         >
                                             {item.name}
-                                        </a>
+                                        </Link>
                                         <button className="w-full px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground">Sign In</button>
                                     </DropdownMenuItem>
                                 ))}

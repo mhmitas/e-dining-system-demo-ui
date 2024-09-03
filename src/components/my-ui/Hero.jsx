@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image"
+import Link from "next/link";
 
 export default function EDiningHero() {
     return (
@@ -15,8 +16,10 @@ export default function EDiningHero() {
                         <p className="text-xl text-muted-foreground">
                             Experience the future of dining with our e-dining system. Order, customize, and enjoy your meals with just a few taps.
                         </p>
-                        <Button size="lg" className="text-lg">
-                            Start Exploring
+                        <Button asChild>
+                            <Link href="/packages" size="lg" className="text-lg">
+                                Start Exploring
+                            </Link>
                         </Button>
                     </div>
                     <Card className="overflow-hidden relative">
