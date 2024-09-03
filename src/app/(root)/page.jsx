@@ -1,10 +1,10 @@
-import { Button } from '@/components/ui/button';
+import EDiningHero from '@/components/my-ui/Hero';
 import React from 'react';
 
 const Page = () => {
     return (
         <section>
-            <Button>Click Me</Button>
+            <EDiningHero />
         </section>
     );
 };

@@ -21,9 +21,9 @@ export default function ResponsiveNavbar() {
     ]
 
     return (
-        <nav className="dark:border-b">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+        <nav className="dark:border-b h-16">
+            <div className="my-container mx-auto flex items-center w-full h-full">
+                <div className="flex items-center justify-between h-full w-full">
                     <div className="flex items-center">
                         <a href="#" className="text-xl font-bold">
                             Logo
@@ -40,6 +40,7 @@ export default function ResponsiveNavbar() {
                                     {item.name}
                                 </a>
                             ))}
+                            <button className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-foreground hover:text-primary">Sign In</button>
                         </div>
                     </div>
                     <div className="md:hidden">
@@ -63,6 +64,7 @@ export default function ResponsiveNavbar() {
                                         >
                                             {item.name}
                                         </a>
+                                        <button className="w-full px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground">Sign In</button>
                                     </DropdownMenuItem>
                                 ))}
                             </DropdownMenuContent>
