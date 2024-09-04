@@ -40,7 +40,7 @@ export default function MealPackages() {
                 <div className="space-y-2 mb-4">
                     <div className="flex justify-between text-sm">
                         <span>Progress</span>
-                        <span>{usedMeals} / {activePackage.meals} meals</span>
+                        <span>{usedMeals} / {activePackage.meals} credits</span>
                     </div>
                     <Progress value={(usedMeals / activePackage.meals) * 100} />
                 </div>
@@ -58,7 +58,7 @@ export default function MealPackages() {
                                 disabled={usedMeals >= activePackage.meals}
                                 className="py-4"
                             >
-                                Use Meal Credit
+                                Take Credit
                             </Button>
                         </DialogTrigger>
                         <PresentACreditBox />

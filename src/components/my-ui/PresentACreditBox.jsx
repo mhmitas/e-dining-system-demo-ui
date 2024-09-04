@@ -13,7 +13,7 @@ const PresentACreditBox = () => {
     const [uniqueCode, setUniqueCode] = useState("AB-1234")
 
     return (
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="sm:max-w-[425px] bg-muted">
             <DialogHeader>
                 <DialogTitle className="text-center">Scan this QR code.</DialogTitle>
             </DialogHeader>
